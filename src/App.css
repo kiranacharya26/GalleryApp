@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-bg: #1e1631;
+  --text-color: #eb9662;
+}
+
+body {
+  background-color: var(--primary-bg);
+  font-family: 'Mulish', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+}
+.title-head {
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+.form-up {
+  margin: 0.2rem auto 0.2rem;
+  text-align: center;
+}
+label input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+label {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 1.5rem;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text-color);
+}
+label:hover {
+  background: var(--primary);
+  color: white;
+}
+.output {
+  color: var(--text-color);
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error {
+  color: var(--error);
+}
+.progress-bar {
+  height: 5px;
+  background: var(--text-color);
+  margin-top: 20px;
+}
+.img-grid {
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+  grid-gap: 0.7rem;
+  margin: 0 4rem;
+}
+
+.img-wrap img {
+  cursor: pointer;
+
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 6rem auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+}
+@media (max-width: 1000px) {
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
